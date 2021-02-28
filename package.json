@@ -1,0 +1,24 @@
+{
+  "name": "zheng",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "docs:dev": "start-storybook -p 6006",
+    "docs:build": "build-storybook"
+  },
+  "dependencies": {
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@storybook/addon-actions": "^6.2.0-beta.2",
+    "@storybook/addon-essentials": "^6.2.0-beta.2",
+    "@storybook/addon-links": "^6.2.0-beta.2",
+    "@storybook/vue3": "^6.2.0-beta.2",
+    "@vue/compiler-sfc": "^3.0.4",
+    "babel-loader": "^8.2.2",
+    "vite": "^1.0.0-rc.13",
+    "vue-loader": "^16.1.2"
+  }
+}
