@@ -1,11 +1,11 @@
 <template>
   <article>
-    <my-header
+    <!-- <my-header
       :user="user"
       @login="$emit('login')"
       @logout="$emit('logout')"
       @createAccount="$emit('createAccount')"
-    />
+    /> -->
 
     <section>
       <h2>Pages in Storybook</h2>

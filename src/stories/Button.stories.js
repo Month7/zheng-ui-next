@@ -1,7 +1,7 @@
-import MyButton from './Button.vue';
+import MyButton from '../components/Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Button 按钮',
   component: MyButton,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -18,13 +18,12 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<my-button v-bind="args">主要按钮</my-button>',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  type: 'primary'
 };
 
 export const Secondary = Template.bind({});
