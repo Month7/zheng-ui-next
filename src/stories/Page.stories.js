@@ -18,12 +18,12 @@ const Template = (args) => ({
   template: '<my-page :user="user" />',
 });
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  ...HeaderStories.LoggedIn.args,
-};
+// export const LoggedIn = Template.bind({});
+// LoggedIn.args = {
+//   ...HeaderStories.LoggedIn.args,
+// };
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {
-  ...HeaderStories.LoggedOut.args,
-};
+// export const LoggedOut = Template.bind({});
+// LoggedOut.args = {
+//   ...HeaderStories.LoggedOut.args,
+// };

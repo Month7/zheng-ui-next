@@ -1,4 +1,4 @@
-import MyButton from '../components/Button';
+import MyButton from '../components/button/Button.vue';
 
 export default {
   title: 'Button 按钮',
@@ -18,7 +18,7 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args">主要按钮</my-button>',
+  template: '<my-button v-bind="args">按钮</my-button>',
 });
 
 export const Primary = Template.bind({});
@@ -26,19 +26,18 @@ Primary.args = {
   type: 'primary'
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const Success = Template.bind({});
+Success.args = {
+  type: 'success',
+  disabled: true
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Info = Template.bind({});
+Info.args = {
+  type: 'info'
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Warn = Template.bind({});
+Warn.args = {
+  type: 'warn'
 };
