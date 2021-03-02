@@ -20,8 +20,6 @@ export default {
   },
   setup(props, ctx) {
     props = reactive(props)
-    console.log(props.type)
-    console.log('button-' + props.type.toString())
     const styleClass = computed(() => {
       return [
         'button-' + props.type,

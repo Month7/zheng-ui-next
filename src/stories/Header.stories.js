@@ -16,13 +16,3 @@ const Template = (args) => ({
   // Then, the spread values can be accessed directly in the template
   template: '<my-header :user="user" />',
 });
-
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {
-  user: null,
-};
