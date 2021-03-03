@@ -1,11 +1,11 @@
 <template>
   <article>
-    <!-- <my-header
+    <my-header
       :user="user"
       @login="$emit('login')"
       @logout="$emit('logout')"
       @createAccount="$emit('createAccount')"
-    /> -->
+    />
 
     <section>
       <h2>Pages in Storybook</h2>
@@ -33,8 +33,8 @@
       </ul>
       <p>
         Get a guided tutorial on component-driven development at
-        <a href="https://www.learnstorybook.com" target="_blank" rel="noopener noreferrer"
-          >Learn Storybook</a
+        <a href="https://storybook.js.org/tutorials/" target="_blank" rel="noopener noreferrer"
+          >Storybook tutorials</a
         >
         . Read more in the
         <a href="https://storybook.js.org/docs" target="_blank" rel="noopener noreferrer">docs</a>

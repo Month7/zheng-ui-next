@@ -1,10 +1,10 @@
 <template>
-  <div :class="'button-' + type" class="button" @click="handleClick">
+  <button :class="styleClass" class="button" @click="handleClick">
     <slot></slot>
-  </div>
+  </button>
 </template>
 <script>
-import { reactive, computed, toRefs } from 'vue'
+import { reactive, computed } from 'vue'
 export default {
   name: 'ZButton',
   emits: ['click'],
@@ -12,19 +12,23 @@ export default {
     type: {
       type: String,
       default: 'primary'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, ctx) {
     props = reactive(props)
-    console.log(props.type)
-    console.log('button-' + props.type.toString())
     const styleClass = computed(() => {
-      return 'button-' + props.type
-      
+      return [
+        'button-' + props.type,
+        props.disabled ? 'not-allowed' : ''
+      ]
     })
     
     const handleClick = args => {
-      ctx.$emits('click', args)
+      ctx.emit('click', args)
     } 
 
     return {
@@ -43,6 +47,7 @@ export default {
   padding: 6px 12px;
   cursor: pointer;
   margin: 4px;
+  display: inline;
 }
 .button:hover{
   opacity: .9;

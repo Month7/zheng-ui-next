@@ -1,7 +1,7 @@
 import MyHeader from './Header.vue';
 
 export default {
-  title: 'Zheng-UI-Next/开发指南',
+  title: 'Example/Header',
   component: MyHeader,
 };
 
