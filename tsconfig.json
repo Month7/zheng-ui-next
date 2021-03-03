@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": false,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "jsx": "preserve",
+    "paths": {
+      "@packages/*": ["./packages/*"],
+    }
+  },
+  "include": ["packages/**/*.vue"],
+  "exclude": [
+    "stories",
+    "output",
+    "node_modules"
+  ],
+}

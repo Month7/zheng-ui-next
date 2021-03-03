@@ -3,9 +3,9 @@
     <slot></slot>
   </button>
 </template>
-<script>
-import { reactive, computed } from 'vue'
-export default {
+<script lang="ts">
+import { reactive, computed, defineComponent } from 'vue'
+export default defineComponent({
   name: 'ZButton',
   emits: ['click'],
   props: {
@@ -36,7 +36,7 @@ export default {
       styleClass
     }
   }
-}
+})
 </script>
 <style>
 .button{
