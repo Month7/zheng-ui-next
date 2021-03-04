@@ -10,7 +10,7 @@
       "@packages/*": ["./packages/*"],
     }
   },
-  "include": ["packages/**/*.vue"],
+  "include": ["packages/**/*.vue", "packages"],
   "exclude": [
     "stories",
     "output",

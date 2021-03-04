@@ -6,7 +6,7 @@
 <script lang="ts">
 import { reactive, computed, defineComponent } from 'vue'
 export default defineComponent({
-  name: 'ZButton',
+  name: 'z-button',
   emits: ['click'],
   props: {
     type: {
