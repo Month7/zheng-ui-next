@@ -1,5 +1,7 @@
 const components = require('./components.json')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const VueLoaderPlugin = require('vue-loader').VueLoaderPlugin
 
@@ -21,9 +23,8 @@ const config = {
       Templates: path.resolve(__dirname, 'packages'),
     },
   },
-  
   output: {
-    path: path.join(__dirname, "./output/lib"), 
+    path: path.join(__dirname, "./zheng-ui"), 
     publicPath: "/",
     libraryTarget: 'umd',
     library: 'Zheng-UI-Next',
@@ -32,13 +33,22 @@ const config = {
     umdNamedDefine: true,
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new CleanWebpackPlugin()
+  ],
+  externals: [
+    {
+      vue: {
+        root: 'Vue',
+        commonjs: 'vue',
+        commonjs2: 'vue',
+      },
+    },
   ],
   module: {
     rules: [{
       test: /\.vue$/,
       loader: 'vue-loader',
-      
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
@@ -51,11 +61,9 @@ const config = {
       },
     }, {
       test: /\.tsx?$/,
-      loader: 'ts-loader',
-      options: {
-        appendTsSuffixTo: [/\.vue$/],
-      },
-      exclude: /node_modules/,
+      use: [
+        'vue-loader', 'vue-tsx-loader?template=html'
+      ],
     }, {
       test: /\.css$/,
       use: ['style-loader', 'css-loader']
