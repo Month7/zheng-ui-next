@@ -1,5 +1,5 @@
 {
   "Button": "./packages/button/index.ts",
   "index": "./packages/index.ts",
-  "fuck": "./packages/fuck/index.js"
+  "Carousel": "./packages/carousel/index.ts"
 }

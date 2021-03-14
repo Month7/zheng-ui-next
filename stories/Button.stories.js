@@ -8,6 +8,12 @@ export default {
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
     onClick: {},
   },
+  parameters: {
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true }
+    }
+  },
 };
 
 const Template = (args) => ({

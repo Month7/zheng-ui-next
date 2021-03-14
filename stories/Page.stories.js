@@ -4,6 +4,12 @@ import * as HeaderStories from './Header.stories';
 export default {
   title: 'Example/Page',
   component: MyPage,
+  parameters: {
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true }
+    }
+  },
 };
 
 const Template = (args) => ({
