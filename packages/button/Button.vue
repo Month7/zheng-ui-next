@@ -5,12 +5,15 @@
 </template>
 <script lang="ts">
 import { reactive, computed, defineComponent } from 'vue'
+import type { PropType } from 'vue'
+type IButtonType = PropType<'primary' | 'success' | 'warn' | 'danger' | 'info'>
+
 export default defineComponent({
   name: 'z-button',
   emits: ['click'],
   props: {
     type: {
-      type: String,
+      type: String as IButtonType,
       default: 'primary'
     },
     disabled: {
@@ -22,7 +25,7 @@ export default defineComponent({
     props = reactive(props)
     const styleClass = computed(() => {
       return [
-        'button-' + props.type,
+        `button-${props.type}`,
         props.disabled ? 'not-allowed' : ''
       ]
     })

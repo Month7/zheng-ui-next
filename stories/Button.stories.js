@@ -1,11 +1,14 @@
 import MyButton from '../packages/button/Button.vue';
 
 export default {
-  title: 'Example/Button',
+  title: 'zheng-ui-next/Button',
   component: MyButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+    // backgroundColor: { control: 'color' },
+    // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+    type: {
+      control: { type: 'select', options: ['primary', 'success', 'info', 'danger', 'warn']
+    }},
     onClick: {},
   },
   parameters: {
@@ -24,28 +27,11 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<my-button v-bind="args">Button</my-button>',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  type: 'primary'
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
