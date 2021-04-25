@@ -1,9 +1,9 @@
-import Button from '../Button.vue'
+import Button from '../button.vue'
 import { mount } from '@vue/test-utils'
 
 const text = 'Huang.small is the best girl'
 
-describe('Button.vue', () => {
+describe('button.vue', () => {
   test('create', () => {
     const wrapper = mount(Button, {
       props: { type: 'primary'}

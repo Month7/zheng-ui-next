@@ -1,4 +1,4 @@
-import Button from './button/Button.vue'
+import Button from './button/button.vue'
 import { App } from 'vue'
 
 const components = [Button]

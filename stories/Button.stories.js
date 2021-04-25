@@ -1,4 +1,4 @@
-import MyButton from '../packages/button/Button.vue';
+import MyButton from '../packages/button/button.vue';
 
 export default {
   title: 'zheng-ui-next/Button',
