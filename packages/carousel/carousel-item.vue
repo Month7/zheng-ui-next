@@ -16,11 +16,6 @@ export default defineComponent({
       default: '1'
     }
   },
-  data() {
-    return {
-      index: 1
-    }
-  },
   setup() {
     // inject
     const activeIndex = inject('activeIndex')
@@ -28,7 +23,6 @@ export default defineComponent({
       value: string
     } = inject('direction')
 
-    // const transitionName = computed(() => `z-carousel-slide-${direction.value}`)
     const transitionName = computed(() => `z-carousel-slide-${direction.value}`)
     
     return {
@@ -75,6 +69,4 @@ export default defineComponent({
   opacity: 0;
   transform: translateX(100%)
 }
-
-
 </style>
