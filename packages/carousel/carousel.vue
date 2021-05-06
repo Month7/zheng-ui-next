@@ -20,6 +20,7 @@ interface ICarouselProp {
 }
 
 export default defineComponent({
+  name: 'z-carousel',
   setup(props: ICarouselProp, ctx: SetupContext) {
     props = reactive(props)
     let currentIndex = 1

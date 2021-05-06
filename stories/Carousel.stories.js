@@ -1,5 +1,5 @@
 import zCarousel from '../packages/carousel/carousel.vue';
-import zCarouselItem from '../packages/carousel/carousel-item.vue'
+import zCarouselItem from '../packages/carousel/carouselItem.vue'
 
 export default {
   title: 'zheng-ui-next/Carousel',
