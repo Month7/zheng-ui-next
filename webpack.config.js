@@ -24,10 +24,10 @@ const config = {
     },
   },
   output: {
-    path: path.join(__dirname, "./zheng-ui"), 
+    path: path.join(__dirname, "./dist"), 
     publicPath: "/",
     libraryTarget: 'umd',
-    library: 'Zheng-UI-Next',
+    library: 'zheng-ui-next',
     globalObject: 'typeof self !== \'undefined\' ? self : this',
     filename: "[name].js",
     umdNamedDefine: true,
@@ -59,11 +59,6 @@ const config = {
       options: {
         appendTsSuffixTo: [/\.vue$/],
       },
-    }, {
-      test: /\.tsx?$/,
-      use: [
-        'vue-loader', 'vue-tsx-loader?template=html'
-      ],
     }, {
       test: /\.css$/,
       use: ['style-loader', 'css-loader']

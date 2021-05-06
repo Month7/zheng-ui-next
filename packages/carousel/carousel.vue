@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
 import { reactive, SetupContext, defineComponent, onMounted, provide, ref, onBeforeUnmount } from 'vue'
-import CarouselItem from './carousel-item.vue'
+import CarouselItem from './carouselItem.vue'
 
 interface ICarouselProp {
   trigger?: string;

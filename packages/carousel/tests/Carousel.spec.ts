@@ -1,5 +1,5 @@
 import Carousel from '../carousel.vue'
-import CarouselItem from '../carousel-item.vue'
+import CarouselItem from '../carouselItem.vue'
 import { mount, MountingOptions } from '@vue/test-utils'
 import { nextTick } from 'vue'
 
