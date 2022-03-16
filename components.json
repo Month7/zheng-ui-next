@@ -1,0 +1,6 @@
+{
+  "Button": "./packages/button/index.ts",
+  "index": "./packages/index.ts",
+  "Carousel": "./packages/carousel/index.ts",
+  "Toast": "./packages/toast/index.ts"
+}

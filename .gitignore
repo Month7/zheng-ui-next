@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+output
+docs/.vuepress/.cache
+docs/.vuepress/.temp
+yarn-error.log
